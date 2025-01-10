@@ -55,9 +55,9 @@ public class Player : MonoBehaviour
          _numSeedsPlanted += 1;
         _numSeedsLeft = _numSeeds -= 1;
         _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted);
+
+        Instantiate(_plantPrefab, _playerTransform.position, Quaternion.identity);
         }
 
-        Instantiate(_plantPrefab);
-        
     }
 }
